@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlueStyle Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background-color: #e6f0fa;
+      color: #000;
+    }
+    header {
+      background-color: #000;
+      color: #e6f0fa;
+      padding: 40px;
+      text-align: center;
+    }
+    .hero {
+  background-image: url('upsplash/freestocks-_3Q3tsJ01nc-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+  .hero h1 {
+    font-size: 3rem;
+     }
+    .form-tabs-container {
+      background-color: white;
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+   
+    .form-content {
+      display: none;
+    }
+    .form-content.active {
+      display: block;
+    }
+    .form-content input[type="text"],
+    .form-content input[type="password"],
+    .form-content input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-content input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007BFF;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-content input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    .features {
+      max-width: 1000px;
+      margin: 40px auto;
+      text-align: center;
+    }
+    .features h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .feature-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .feature-item {
+      background: white;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1 1 250px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: #e6f0fa;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BlueStyle Clothing</h1>
+  
+  </header>
+  <div class="background-image">
+  <div class="hero">
+    <h1>Style That Speaks</h1>
+  </div>
+  </div>
+
+  <!--body feature-items-->
+
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-items">
+      <div class="feature-item">
+        <h3>Trendy Designs</h3>
+        <p>Stay ahead in fashion with our unique and stylish collections.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Quality Fabric</h3>
+        <p>Only the best materials for comfort and durability.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Fast Delivery</h3>
+        <p>Quick and reliable shipping to your doorstep.</p>
+      </div>
+    </div>
+  </section>
+
+
+ <!---container -->
+  <section class="form-tabs-container">    
+    <div id="login" class="form-content active">
+      <form onsubmit="return validateLoginForm()">
+        <input type="text" id="username" placeholder="Username" required />
+         <input type="email" id="email" placeholder="email" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <input type="submit" value="Login" />
+      </form>
+    </div> 
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BlueStyle Clothing. All rights reserved.</p>
+  </footer>
+
+  <script>
+
+    function validateLoginForm() {
+      const username = document.getElementById("username").value.trim();
+      const  email  =    document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username.length < 4) {
+        alert("Username must be at least 4 characters long.");
+        return false;
+      }
+
+      if (password.length < 6) {
+        alert("Password must be at least 6 characters long.");
+        return false;
+      }
+      if (email.length < 7) {
+        alert("email must be at least 7 characters long")
+        return false;
+      }
+   
+      return true;
+    }
+  </script>
+</body>
+</html>
